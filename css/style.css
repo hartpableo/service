@@ -502,6 +502,71 @@ body main .service-packages .package:last-child {
   margin-top: 4.0625rem;
 }
 
+body form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 4rem auto;
+  background: #ffd9002d;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 2em;
+  border-radius: 8px;
+  -webkit-box-shadow: 1px 1px 10px 2px goldenrod;
+          box-shadow: 1px 1px 10px 2px goldenrod;
+}
+
+body form h3 {
+  margin-bottom: 1.3125rem;
+}
+
+body form label {
+  color: #fff;
+}
+
+body form input, body form select {
+  padding: 0.5em;
+  margin-bottom: 0.7em;
+  border-radius: 8px;
+  border: none;
+}
+
+body form input::-webkit-input-placeholder, body form select::-webkit-input-placeholder {
+  font-family: 'Poppins', sans-serif;
+}
+
+body form input:-ms-input-placeholder, body form select:-ms-input-placeholder {
+  font-family: 'Poppins', sans-serif;
+}
+
+body form input::-ms-input-placeholder, body form select::-ms-input-placeholder {
+  font-family: 'Poppins', sans-serif;
+}
+
+body form input::placeholder, body form select::placeholder {
+  font-family: 'Poppins', sans-serif;
+}
+
+body form input[type=submit], body form select[type=submit] {
+  background: #FFD700;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 1.5em;
+}
+
 body footer {
   background: #222222;
   margin-top: 7.8rem;
@@ -540,62 +605,6 @@ body footer .main-footer small {
 
 body footer .main-footer small a {
   color: #DEBB00;
-}
-
-body footer form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-body footer form h3 {
-  margin-bottom: 1.3125rem;
-}
-
-body footer form label {
-  color: #fff;
-}
-
-body footer form input, body footer form select {
-  padding: 0.5em;
-  margin-bottom: 0.7em;
-  border-radius: 8px;
-  border: none;
-}
-
-body footer form input::-webkit-input-placeholder, body footer form select::-webkit-input-placeholder {
-  font-family: 'Poppins', sans-serif;
-}
-
-body footer form input:-ms-input-placeholder, body footer form select:-ms-input-placeholder {
-  font-family: 'Poppins', sans-serif;
-}
-
-body footer form input::-ms-input-placeholder, body footer form select::-ms-input-placeholder {
-  font-family: 'Poppins', sans-serif;
-}
-
-body footer form input::placeholder, body footer form select::placeholder {
-  font-family: 'Poppins', sans-serif;
-}
-
-body footer form input[type=submit], body footer form select[type=submit] {
-  background: #FFD700;
-  border: none;
-  text-transform: uppercase;
-  font-size: 1.2rem;
-  font-family: 'Poppins', sans-serif;
-  margin-top: 1.5em;
 }
 
 @media (min-width: 800px) {
