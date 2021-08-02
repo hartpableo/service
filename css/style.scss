@@ -1,12 +1,4 @@
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-}
+@import 'defaults';
 
 p, li {
     line-height: 170%;
@@ -127,18 +119,21 @@ body {
         }
     }
     main {
-        width: 91.67%;
+        width: 100%;
+        max-width: 1450px;
         margin: auto;
         .landing {
             width: 100%;
             height: fit-content;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
             text-align: center;
             padding-top: 5.8125rem;
             padding-bottom: 3.125rem;
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
             .landing-img {
                 width: 12rem;
                 height: 12rem;
@@ -200,18 +195,27 @@ body {
             height: fit-content;
             padding-top: 4.375rem;
             text-align: center;
-            .client {
-                width: 100%;
-                height: auto;
+            .client-slider {
+                display: flex;
                 overflow-x: hidden;
-                .client-logo {
-                    width: 15.1875rem;
-                    height: 15.1875rem;
-                    margin-top: 4.3125rem;
-                    margin-bottom: 3.4375rem;
-                }
-                p {
-                    text-align: left;
+                align-items: start;
+                .client {
+                    min-width: 100%;
+                    height: auto;
+                    overflow-x: hidden;
+                    transition: all 400ms ease-in-out;
+                    .client-logo {
+                        width: 15.1875rem;
+                        height: 15.1875rem;
+                        margin-top: 4.3125rem;
+                        margin-bottom: 3.4375rem;
+                    }
+                    p {
+                        text-align: center;
+                    }
+                    .srgw-logo {
+                        background-color: #111;
+                    }
                 }
             }
         }
@@ -377,7 +381,7 @@ body {
             label {
                 color: #fff;
             }
-            input, select {
+            input, select, textarea {
                 padding: 0.5em;
                 margin-bottom: 0.7em;
                 border-radius: 8px;

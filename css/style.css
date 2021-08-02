@@ -9,6 +9,41 @@ html {
   scroll-behavior: smooth;
 }
 
+.container {
+  width: 99%;
+  margin: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    width: 1320px;
+  }
+}
+
 p, li {
   line-height: 170%;
   font-size: 1.35rem;
@@ -165,7 +200,8 @@ body nav.clicked {
 }
 
 body main {
-  width: 91.67%;
+  width: 100%;
+  max-width: 1450px;
   margin: auto;
 }
 
@@ -174,6 +210,12 @@ body main .landing {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  text-align: center;
+  padding-top: 5.8125rem;
+  padding-bottom: 3.125rem;
+}
+
+body main .landing .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -187,9 +229,6 @@ body main .landing {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: center;
-  padding-top: 5.8125rem;
-  padding-bottom: 3.125rem;
 }
 
 body main .landing .landing-img {
@@ -272,21 +311,37 @@ body main .client-feedback {
   text-align: center;
 }
 
-body main .client-feedback .client {
-  width: 100%;
-  height: auto;
+body main .client-feedback .client-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   overflow-x: hidden;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
 }
 
-body main .client-feedback .client .client-logo {
+body main .client-feedback .client-slider .client {
+  min-width: 100%;
+  height: auto;
+  overflow-x: hidden;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+body main .client-feedback .client-slider .client .client-logo {
   width: 15.1875rem;
   height: 15.1875rem;
   margin-top: 4.3125rem;
   margin-bottom: 3.4375rem;
 }
 
-body main .client-feedback .client p {
-  text-align: left;
+body main .client-feedback .client-slider .client p {
+  text-align: center;
+}
+
+body main .client-feedback .client-slider .client .srgw-logo {
+  background-color: #111;
 }
 
 body main .about-section {
@@ -535,30 +590,30 @@ body form label {
   color: #fff;
 }
 
-body form input, body form select {
+body form input, body form select, body form textarea {
   padding: 0.5em;
   margin-bottom: 0.7em;
   border-radius: 8px;
   border: none;
 }
 
-body form input::-webkit-input-placeholder, body form select::-webkit-input-placeholder {
+body form input::-webkit-input-placeholder, body form select::-webkit-input-placeholder, body form textarea::-webkit-input-placeholder {
   font-family: 'Poppins', sans-serif;
 }
 
-body form input:-ms-input-placeholder, body form select:-ms-input-placeholder {
+body form input:-ms-input-placeholder, body form select:-ms-input-placeholder, body form textarea:-ms-input-placeholder {
   font-family: 'Poppins', sans-serif;
 }
 
-body form input::-ms-input-placeholder, body form select::-ms-input-placeholder {
+body form input::-ms-input-placeholder, body form select::-ms-input-placeholder, body form textarea::-ms-input-placeholder {
   font-family: 'Poppins', sans-serif;
 }
 
-body form input::placeholder, body form select::placeholder {
+body form input::placeholder, body form select::placeholder, body form textarea::placeholder {
   font-family: 'Poppins', sans-serif;
 }
 
-body form input[type=submit], body form select[type=submit] {
+body form input[type=submit], body form select[type=submit], body form textarea[type=submit] {
   background: #FFD700;
   border: none;
   text-transform: uppercase;
